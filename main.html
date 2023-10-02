@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <style>
+        /* Basic styling for the layout */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+			background-color:black;
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .card {
+            flex: 0 1 calc(33.33% - 20px); /* 33.33% width with a little spacing */
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div class="container">
+        <h1>Shaws's News</h1>
+        <div class="card-container">
+            <div class="card">
+                <h2>Latest News</h2>
+                <p>.Article 1</p>
+            </div>
+            <div class="card">
+                <h2>Main Article</h2>
+                <p>this is the main content
+				</p>
+            </div>
+            <div class="card">
+                <h2>Card 3</h2>
+                <img src="https://i.pinimg.com/550x/0d/52/c4/0d52c4fd0656b4f20dee76bc29ddd5b6.jpg" alt="Card Image">
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
